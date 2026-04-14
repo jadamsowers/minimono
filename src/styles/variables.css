@@ -1,0 +1,47 @@
+:root {
+  /* Panel Colors */
+  --panel-bg: #0c0c0c;
+  --panel-screw: #d7d7d7;
+  --label: #f2e9d2;
+  --knob-cap: #111111;
+  --chrome: #d7d7d7;
+  --wood: #8b5a2b;
+  --led-off: #330000;
+  --led-on: #ff6600;
+  --led-glow: rgba(255,102,0,0.3);
+  
+  /* Accent Colors */
+  --accent-orange: #ff6600;
+  --accent-red: #cc4400;
+  --accent-blue: #4466cc;
+  --accent-green: #44aa66;
+  
+  /* Shadows */
+  --shadow-drop: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-inset: inset 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-outer: 0 2px 6px rgba(0,0,0,0.3);
+  
+  /* Typography */
+  --font-primary: 'Eurostile-Medium', 'Futura-Medium', 'Gotham', 'Arial-Black', sans-serif;
+  --font-mono: 'Menlo', 'Monaco', 'Consolas', monospace;
+  --font-label: 'Eurostile', 'Futura', 'Helvetica', 'Arial', sans-serif;
+}
+
+[data-theme="flat"] {
+  --panel-bg: #1a1a2e;
+  --label: #f0f0f0;
+  --chrome: #e0e0e0;
+}
+
+/* Knb sizing */
+.knob-small {
+  --knob-size: 28px;
+}
+
+.knob-medium {
+  --knob-size: 36px;
+}
+
+.knob-large {
+  --knob-size: 48px;
+}

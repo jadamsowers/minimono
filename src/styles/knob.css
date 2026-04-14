@@ -1,0 +1,83 @@
+.knob-wrapper {
+  gap: 8px;
+  user-select: none;
+}
+
+.knob-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.knob {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #0a0a0a;
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.8),
+    inset 0 -2px 5px rgba(255,255,255,0.05),
+    inset 0 2px 2px rgba(0,0,0,0.8);
+  position: relative;
+  border: 1px solid #1a1a1a;
+  transition: border-color 0.2s;
+  cursor: grab;
+}
+
+.knob:active {
+  cursor: grabbing;
+}
+
+.knob-container:hover .knob {
+  border-color: #333;
+}
+
+.knob-inner {
+  position: absolute;
+  inset: 15%; /* Smaller than the base for the tapered look */
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #888 0%, #ccc 20%, #999 40%, #666 100%); /* Silver cap */
+  display: flex;
+  justify-content: center;
+  box-shadow: 
+    inset 0 1px 1px rgba(255,255,255,0.8),
+    0 2px 4px rgba(0,0,0,0.5);
+  border: 0.5px solid #444;
+}
+
+.knob-indicator {
+  position: absolute;
+  top: -10%; /* Starts outside the silver cap */
+  width: 3px;
+  height: 60%;
+  background-color: #f2e9d2;
+  border-radius: 1px;
+  transform-origin: 50% 100%; /* Bottom of indicator is the center of rotation */
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.knob-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #f2e9d2;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  opacity: 0.9;
+  margin-top: 4px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.knob-value {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: #ff6600;
+  margin-top: -1px;
+  opacity: 0.8;
+}

@@ -1,0 +1,78 @@
+.rocker-switch {
+  width: 24px;
+  height: 48px;
+  background: #111;
+  border-radius: 4px;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  border: 1px solid #000;
+  box-shadow: 
+    inset 0 1px 4px rgba(0,0,0,0.8),
+    0 1px 2px rgba(255,255,255,0.05);
+}
+
+.rocker-switch-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+}
+
+.rocker-switch.active .rocker-switch-inner {
+  transform: rotateX(-15deg);
+}
+
+.rocker-switch:not(.active) .rocker-switch-inner {
+  transform: rotateX(15deg);
+}
+
+.rocker-switch-cap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333; /* Default gray/black */
+  transition: background 0.2s;
+}
+
+/* Colors */
+.rocker-switch.blue .rocker-switch-cap {
+  background: linear-gradient(180deg, #1e4d8c 0%, #153a6b 100%);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.rocker-switch.red .rocker-switch-cap {
+  background: linear-gradient(180deg, #a62626 0%, #801d1d 100%);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.rocker-switch.yellow .rocker-switch-cap {
+  background: linear-gradient(180deg, #c9a52a 0%, #9e821f 100%);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.rocker-switch.active .rocker-switch-cap {
+  filter: brightness(1.2);
+}
+
+.rocker-switch-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.rocker-switch.active .rocker-switch-highlight {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+}
