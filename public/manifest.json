@@ -1,0 +1,23 @@
+{
+  "name": "Minimono Synthesizer",
+  "short_name": "Minimono",
+  "description": "Boutique 1970s-style Virtual Analog Synthesizer",
+  "theme_color": "#1a1a1a",
+  "background_color": "#1a1a1a",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "./",
+  "start_url": "./index.html",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
